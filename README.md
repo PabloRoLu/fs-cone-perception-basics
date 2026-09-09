@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ```bash
 python cone_detection_basic.py
 ```
-4. Ejecutar el scricpt HSV:
+4. Ejecutar el script HSV:
 ```bash
 python cone_detection_hsv.py
 ```
