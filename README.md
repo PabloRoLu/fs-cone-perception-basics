@@ -8,11 +8,13 @@ Este repositorio contiene un pipeline sencillo de percepción que permite:
 - Generar Bounding Boxes (rectos y orientados)
 - Filtrar ruido mediante operaciones morfológicas
 - Clasificar conos por color en espacio HSV (azul, amarillo y naranja)
+- Emparejar conos izquierdos y derechos para estimar el centro de la pista
 
 El objetivo es construir una base sólida de visión por computador orientada a la detección de conos, que es uno de los primeros pasos en el stack de Autonomous de Formula Student.
 ## Archivos
 - `cone_detection_basic.py` — detección por umbral, morfología, contornos y bounding boxes
 - `cone_detection_hsv.py` — detección y etiquetado por color (HSV)
+- `cone_track_centerline.py` — pares azul/amarillo y línea central de pista
 ## Librerías utilizadas
 - Python
 - OpenCV
@@ -32,6 +34,10 @@ python cone_detection_basic.py
 ```bash
 python cone_detection_hsv.py
 ```
+5. Ejecutar el script de centro de pista:
+```bash
+python cone_track_centerline.py
+```
 ## Estado actual
 - [x] Creación de imagen sintética con conos
 - [x] Preprocesamiento (threshold + morfología)
@@ -39,6 +45,7 @@ python cone_detection_hsv.py
 - [x] Cálculo de centroides
 - [x] Bounding Boxes (recto y orientado)
 - [x] Clasificacion por color HSV en imagen sintética (azul/amarillo/naranja)
+- [x] Estimación del centro de pista a partir de pares azul / amarillo
 - [ ] Detección por color (HSV) en imágenes reales
 - [ ] Integración con ROS2
 ## Próximos pasos
