@@ -38,6 +38,10 @@ python cone_detection_hsv.py
 ```bash
 python cone_track_centerline.py
 ```
+## Resultados
+![Detección HSV](images/hsv_result.png)
+
+![Centro de pista](images/centerline_result.png)
 ## Estado actual
 - [x] Creación de imagen sintética con conos
 - [x] Preprocesamiento (threshold + morfología)
