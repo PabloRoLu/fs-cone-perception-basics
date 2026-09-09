@@ -24,7 +24,7 @@ El objetivo es construir una base sólida de visión por computador orientada a 
 1. Clonar el repositorio
 2. Instalar las dependencias:
 ```bash
-pip install opencv-python numpy matplotlib
+pip install -r requirements.txt
 ```
 3. Ejecutar el script básico:
 ```bash
