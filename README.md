@@ -5,7 +5,7 @@ Este repositorio contiene un pipeline sencillo de percepción que permite:
 
 - Detectar formas que simulan conos en una imagen sintética
 - Calcular el centroide de cada cono
-- Generar Bounding Boxes (rectos y orientados)
+- Generar Bounding Boxes 
 - Filtrar ruido mediante operaciones morfológicas
 - Clasificar conos por color en espacio HSV (azul, amarillo y naranja)
 - Emparejar conos izquierdos y derechos para estimar el centro de la pista
