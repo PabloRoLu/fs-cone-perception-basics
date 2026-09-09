@@ -30,7 +30,7 @@ pip install opencv-python numpy matplotlib
 ```bash
 python cone_detection_basic.py
 ```
-4. Ejecutar el sricpt HSV:
+4. Ejecutar el scricpt HSV:
 ```bash
 python cone_detection_hsv.py
 ```
