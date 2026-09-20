@@ -10,6 +10,7 @@ Este repositorio contiene un pipeline sencillo de percepción que permite:
 - Clasificar conos por color en espacio HSV (azul, amarillo y naranja)
 - Emparejar conos izquierdos y derechos para estimar el centro de la pista
 - Detectar conos naranjas y amarillos en una foto real de competición
+- Calibrar rangos HSV con trackbars sobre esa foto de competición
 
 El objetivo es construir una base sólida de visión por computador orientada a la detección de conos, que es uno de los primeros pasos en el stack de Autonomous de Formula Student.
 ## Archivos
@@ -17,6 +18,7 @@ El objetivo es construir una base sólida de visión por computador orientada a 
 - `cone_detection_hsv.py` — detección y etiquetado por color (HSV)
 - `cone_track_centerline.py` — pares azul/amarillo y línea central de pista
 - `cone_detection_real.py` — detección HSV sobre una foto real de pista
+- `hsv_tuner.py` — sliders para ajustar H, S y V sobre la foto real
 ## Librerías utilizadas
 - Python
 - OpenCV
@@ -44,12 +46,21 @@ python cone_track_centerline.py
 ```bash
 python cone_detection_real.py
 ```
+7. Ejecutar el script del calibrador HSV:
+```bash
+python hsv_tuner.py
+```
 ## Resultados
 ![Detección HSV](images/hsv_result.png)
 
 ![Centro de pista](images/centerline_result.png)
 
 ![Detección en foto real](images/real_result.png)
+
+![Calibración HSV naranja](images/hsv_orange_result.png)
+
+![Calibración HSV amarillo](images/hsv_yellow_result.png)
+
 ## Estado actual
 - [x] Creación de imagen sintética con conos
 - [x] Preprocesamiento (threshold + morfología)
@@ -59,10 +70,10 @@ python cone_detection_real.py
 - [x] Clasificacion por color HSV en imagen sintética (azul/amarillo/naranja)
 - [x] Estimación del centro de pista a partir de pares azul / amarillo
 - [x] Detección por color (HSV) en imágenes reales
+- [x] Calibración de rangos HSV con trackbars
 - [ ] Integración con ROS2
 ## Próximos pasos
-- Ajustar rangos HSV a iluminación de pista
-- Agrupar mejor las cajas partidas por franjas del cono
+- Probar los rangos calibrados con más fotos (otra luz)
 - Empezar a estructurar el código como nodos de ROS2
 ---
 Desarrollado como parte de mi preparación para entrar en el área de Autonomous de UVigo Motorsport.
