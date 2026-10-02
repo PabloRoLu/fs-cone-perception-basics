@@ -53,8 +53,8 @@ El objetivo es construir una base sólida de visión por computador orientada a 
 El vídeo original **no se incluye** en el repositorio. Para reproducir el resultado:
 
 1. Descarga un fragmento de ~11 s del vídeo [Formula Student Germany Driverless Skidpad](https://www.youtube.com/watch?v=Fs6a0Aqu4YA) de KA-RaceIng e.V. (fragmento usado: del `00:16` al `00:27`).
-2. Guárdalo como `videos/track.MOV` en la raíz del repositorio.
-3. Ejecuta el script desde la raíz del repo. Pulsa `q` para salir.
+2. Crea una carpeta `videos` en la raíz del repositorio y guarda dentro el fragmento con el nombre `track.MOV` (respetando las mayúsculas).
+3. Ejecuta el script. Pulsa `q` para salir:
 
 ## Librerías utilizadas
 
