@@ -1,10 +1,15 @@
+import os
+import sys
 import numpy as np
 import cv2
 
-ruta = r"C:\Users\pablo\Downloads\track.MOV"
+carpeta = os.path.dirname(os.path.abspath(__file__))
+ruta = sys.argv[1] if len(sys.argv) > 1 else os.path.join(carpeta, "videos", "track.MOV")
 cap = cv2.VideoCapture(ruta)
 if not cap.isOpened():
-    raise FileNotFoundError(f"No se pudo abrir {ruta}")
+    raise FileNotFoundError(f"No se pudo abrir {ruta}\n"
+        "Descarga el fragmento del video (ver 'Video de entrada' en el README) "
+        "y guardalo como videos/track.MOV, o pasa la ruta como argumento.")
 
 rango_amarillo = (np.array([13, 40, 30]), np.array([35, 255, 255]))
 rango_naranja = (np.array([0, 55,75]), np.array([10, 255, 255]))
